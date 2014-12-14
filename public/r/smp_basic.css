@@ -1,0 +1,111 @@
+@charset "utf-8";
+/* 基本CSS [basic][header][footer][others][module]  */
+
+/* ==== [basic] ===== */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+body {
+    line-height:1;
+	background:#fff;
+	color:#333;
+	font-family: "Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W3",Osaka,"MS P Gothic","ＭＳ Ｐゴシック",sans-serif;
+	-webkit-text-size-adjust: none;
+	word-break:break-all;
+	word-wrap:break-word;
+}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+	display:block;
+}
+nav ul {
+    list-style:none;
+}
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+input, select {
+    vertical-align:middle;
+}
+p{
+	line-height:1.4em;
+}
+a img{
+	outline: none;
+}
+/* ==== [header] ===== */
+ #global_header{
+	position:ralative;
+	min-height:44px;
+}
+#global_header p#header_logo{
+	position:absolute;
+	left:10px;
+	top:0;
+	width:115px;
+	height:44px;
+	vertical-align:middle;
+}
+#header_logo a{
+	display:block;
+	height:44px;
+}
+#global_header>div{
+	display:block;
+	padding-left:125px;
+}
+/* ==== [others] ===== */
+.hash_link{
+	display:block;
+	text-align:right;
+	font-size:12px;
+	font-size:0.75rem;
+	padding:7px 10px;
+}
+.hash_link span{
+	display:inline-block;
+	max-width:75%;
+	margin-bottom:10px;
+	overflow: hidden;
+	white-space: nowrap;
+	-webkit-text-overflow: ellipsis;	
+	text-overflow: ellipsis;
+}
+/* ==== [module] ===== */
+.txt_s{font-size:10px !important;font-size:0.62rem !important;letter-spacing:-0.001em !important;}
+.txt_m{font-size:12px !important;font-size:0.75rem !important;}
+.txt_l{font-size:14px !important;font-size:0.87rem !important;}
+.txt_ll{font-size:16px !important;font-size:1rem !important;}
+.txtw_n{font-weight:normal !important;}
+.txtw_b{font-weight:bold !important;}
+.txtalgn_l{text-align: left;}
+.txtalgn_c{text-align: center;}
+.txtalgn_r{text-align: right;}
+.clr_red{color:#da2d05 !important;}
+.clr_gray{color:#777 !important;}
+.cst_p{padding:0 10px 10px 10px;line-height:1.4em;}
