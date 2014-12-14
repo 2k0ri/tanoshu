@@ -3,8 +3,78 @@ html
   head
     title 
     link(rel='stylesheet', href='/public/style/main.css')
-      body
-        h1 It works 
+  body
+    header
+      a: img
+      | 三劇団共演企画「たのしい就活」 公演特設ページ
         
-        script(src='/public/scripts/main.js')
-          
+    nav
+      ul
+        li: a トップ
+        li: a イントロダクション
+        li: a 詳細情報
+        li: a 役者・スタッフ
+        li: a 宣伝CM
+        li: a チケット予約
+    
+    div#hero
+    
+    div#main
+      article.main__intro イントロダクション
+        ul
+          li
+            div 演出のことば
+            ul: li
+              div
+          li
+            div 三劇団共演企画とは
+            ul: li
+              div
+      article.main__detail 詳細情報
+        ul
+          li
+            div 日時
+              table
+          li 
+            div 料金
+            div.main__detail__prices
+              div.main__detail__prices
+              div.main__detail__prices
+              div.main__detail__prices
+            div
+              | リツイート割とは
+          li 
+            div 場所
+              img(alt="立命館大学 学生会館小ホール")
+              div
+                img
+              div: pre.
+                ★JR円町駅・阪急西院駅 
+                市バス快速202/快速205にて「立命館大学前」下車 
+                市バス205にて「衣笠校前」下車徒歩10分
+                ★JR・近鉄京都駅 
+                市バス50/快速205にて「立命館大学前」下車 
+                市バス205にて「衣笠校前」下車、徒歩10分 
+                京阪電車三条t駅 
+                市バス15/59にて「立命館大学前」下車
+            
+              
+            
+    div#side
+      ul
+        li 劇団西一風
+        li 新演劇研究会劇団月光斜
+        li 劇団立命芸術劇場
+      div.side__tw
+        たのしい就活 Twitter
+        a.button CHECK
+      div.side__fb
+        たのしい就活 Facebook
+        a.button CHECK
+      div.side__reserve 予約はこちら
+        !!!!!!
+        a.button--full 今すぐ予約する
+      div.side__retweet リツイート割
+        !!!!!!
+        a.button--full @endorphin_h
+    script(src='/public/scripts/main.js')
