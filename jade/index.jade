@@ -7,8 +7,8 @@ html
     .containter
       .header
         a
-          img(alt="たのしい就活", src="")
-          | 三劇団共演企画「たのしい就活」 公演特設ページ
+          img.logo(alt="たのしい就活", src="/public/images/stamp.png")
+          span 三劇団共演企画vol.1「たのしい就活」 公演特設ページ
       .nav
         ul
           li: a トップ
@@ -16,26 +16,34 @@ html
           li: a 詳細情報
           li: a 役者・スタッフ
           li: a 宣伝CM
-          li: a チケット予約
+          li.ticket: a チケット予約
       .hero
       .main
-        .main__intro イントロダクション
+        #intro イントロダクション
           ul
             li
-              div 演出のことば
+              div
+                span.icon-play-circle-fill
+                |  三劇団共演企画とは
               ul: li
                 div
             li
-              div 三劇団共演企画とは
+              div
+                span.icon-play-circle-fill
+                |  演出のことば
               ul: li
                 div
-        .main__detail 詳細情報
+        #detail 詳細情報
           ul
             li
-              div 日時
+              div
+                span.icon-play-circle-fill
+                |  日時
                 table
             li 
-              div 料金
+              div 
+                span.icon-play-circle-fill
+                |  料金
               .main__detail__prices
                 .main__detail__prices
                 .main__detail__prices
@@ -59,19 +67,30 @@ html
                     市バス15/59にて「立命館大学前」下車
       .side
         ul
-          li 劇団西一風
-          li 新演劇研究会劇団月光斜
-          li 劇団立命芸術劇場
+          li
+            span.icon-arrow-right
+            | 劇団西一風
+          li
+            span.icon-arrow-right
+            | 新演劇研究会劇団月光斜
+          li
+            span.icon-arrow-right
+            | 劇団立命芸術劇場
         .side__tw
+          span.icon-twitter
           | たのしい就活 Twitter
           a.button CHECK
         .side__fb
           | たのしい就活 Facebook
           a.button CHECK
-        .side__reserve 予約はこちら
+        .side__reserve 
+          span.icon-person
+          | 予約はこちら
           | !!!!!!
           a.side__button--full 今すぐ予約する
-        .side__retweet リツイート割
+        .side__retweet 
+          span.icon-retweet
+          | リツイート割
           | !!!!!!
-          a.side__button--full @endorphin_h
+          a.side__button--full: @endorphin_h
     script(src='/public/scripts/main.js')
