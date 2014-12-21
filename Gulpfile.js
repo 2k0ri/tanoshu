@@ -25,7 +25,7 @@ var p = {
   },
   jade: {
     src: 'jade/*.jade',
-    dest: 'build/' 
+    dest: 'build/'
   }
 }
 
@@ -43,7 +43,7 @@ gulp.task('compass', function() {
   gulp.src(p.sass.src)
     .pipe(compass({
       css: 'build/public/style',
-      sass: 'public/sass', 
+      sass: 'public/sass',
       require: ['susy', 'breakpoint', 'modular-scale'],
       sourcemap: true
     }))
@@ -53,20 +53,20 @@ gulp.task('compass', function() {
     .pipe(minifyCss())
     .pipe(gulp.dest(p.sass.dest))
     .pipe(connect.reload())
-}) 
+})
 
 // Coffee
 gulp.task('browserify', function() {
-  
-    gulp.src(p.scripts.coffee, {read: false})  
-  
-  
+
+    gulp.src(p.scripts.coffee, {read: false})
+
+
     .pipe(plumber())
     .pipe(browserify({
-      
+
       transform: ['coffeeify'],
       extensions: ['.coffee']
-      
+
     }))
     .pipe(rename('main.js'))
     .pipe(uglify())
@@ -78,7 +78,7 @@ gulp.task('browserify', function() {
 gulp.task('jade', function() {
   gulp.src(p.jade.src)
     .pipe(plumber())
-    .pipe(jade())
+    .pipe(jade({pretty: true}))
     .pipe(gulp.dest(p.jade.dest))
     .pipe(connect.reload())
 })

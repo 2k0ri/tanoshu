@@ -1,4 +1,3 @@
-@import "compass/reset";
 @import "normalize";
 @import "susy";
 @import "breakpoint";
@@ -6,7 +5,57 @@
 
 // Variables
 $susy:(
-  columns: 12,
-  gutters: 1/4
-  
+  container: 850px,
+  columns: 4,
+  gutters: .25
 );
+
+.container {
+  @include container(850px);
+}
+
+.nav a {
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(181, 0, 0);
+  border-radius: 3px;
+  background-image: -moz-linear-gradient( 90deg, rgb(51,51,51) 0%, rgb(51,51,51) 0%, rgb(181,0,0) 0%, rgb(255,255,255) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(51,51,51) 0%, rgb(51,51,51) 0%, rgb(181,0,0) 0%, rgb(255,255,255) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(51,51,51) 0%, rgb(51,51,51) 0%, rgb(181,0,0) 0%, rgb(255,255,255) 100%);
+  box-shadow: inset 0.5px 0.866px 0px 0px rgba(255, 255, 255, 0.392);
+  width: 111px;
+  height: 42px;
+  &:hover {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(181, 0, 0);
+    border-radius: 3px;
+    background-image: -moz-linear-gradient( 90deg, rgb(51,51,51) 0%, rgb(51,51,51) 0%, rgb(181,0,0) 0%, rgb(255,255,255) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(51,51,51) 0%, rgb(51,51,51) 0%, rgb(181,0,0) 0%, rgb(255,255,255) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(51,51,51) 0%, rgb(51,51,51) 0%, rgb(181,0,0) 0%, rgb(255,255,255) 100%);
+    box-shadow: inset 0.5px 0.866px 0px 0px rgba(255, 255, 255, 0.392);
+  }
+  &:active {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(181, 0, 0);
+    border-radius: 3px;
+    background-image: -moz-linear-gradient( 90deg, rgb(51,51,51) 0%, rgb(51,51,51) 0%, rgb(181,0,0) 0%, rgb(243,0,0) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(51,51,51) 0%, rgb(51,51,51) 0%, rgb(181,0,0) 0%, rgb(243,0,0) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(51,51,51) 0%, rgb(51,51,51) 0%, rgb(181,0,0) 0%, rgb(243,0,0) 100%);
+    box-shadow: inset 0.707px 0.707px 0px 0px rgba(253, 121, 121, 0.392);
+  }
+}
+
+.main {
+  @include breakpoint(850px) {
+    @include span(3 of 4);
+  }
+}
+
+.side {
+  @include breakpoint(850px) {
+    @include span(1 of 4 last);
+  };
+}
