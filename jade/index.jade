@@ -5,92 +5,150 @@ html
     link(rel='stylesheet', href='/public/style/main.css')
   body
     .containter
-      .header
+      #top.header
         a
           img.logo(alt="たのしい就活", src="/public/images/stamp.png")
           span 三劇団共演企画vol.1「たのしい就活」 公演特設ページ
       .nav
         ul
-          li: a トップ
-          li: a イントロダクション
-          li: a 詳細情報
-          li: a 役者・スタッフ
-          li: a 宣伝CM
-          li.ticket: a チケット予約
+          li: a(href="#top") トップ
+          li: a(href="#intro") イントロダクション
+          li: a(href="#detail") 詳細情報
+          li: a(href="#cast") 役者・スタッフ
+          li: a(href="#cm") 宣伝CM
+          li.ticket: a(href="#reserve") チケット予約
       .hero
+        img(src="/public/images/hero.png", alt="たのしい就活", usemap="hero")
+        map(name="hero")
+          area(shape="rect", coords="328,181,736,248", href="https://twitter.com/endorphin_h", alt="たのしい就活Twitter")
       .main
-        #intro イントロダクション
-          ul
-            li
-              div
-                span.icon-play-circle-fill
-                |  三劇団共演企画とは
-              ul: li
-                div
-            li
-              div
-                span.icon-play-circle-fill
-                |  演出のことば
-              ul: li
-                div
-        #detail 詳細情報
-          ul
-            li
-              div
-                span.icon-play-circle-fill
-                |  日時
-                table
-            li 
-              div 
-                span.icon-play-circle-fill
-                |  料金
-              .main__detail__prices
-                .main__detail__prices
-                .main__detail__prices
-                .main__detail__prices
-              div
-                | リツイート割とは
-            li 
-              div 場所
-                img(alt="立命館大学 学生会館小ホール", src="")
-                div
-                  img(alt="立命館大学 学生会館小ホール", src="")
-                div
-                  p.
-                    ★JR円町駅・阪急西院駅
-                    市バス快速202/快速205にて「立命館大学前」下車
-                    市バス205にて「衣笠校前」下車徒歩10分
-                    ★JR・近鉄京都駅
-                    市バス50/快速205にて「立命館大学前」下車
-                    市バス205にて「衣笠校前」下車、徒歩10分
-                    京阪電車三条駅
-                    市バス15/59にて「立命館大学前」下車
+        #intro.article 
+          h1 イントロダクション
+          div.section
+            h2
+              span.icon-play-circle-fill
+              |  三劇団共演企画とは
+            .content
+              | 立命館大学衣笠キャンパスの「劇団月光斜」「劇団西一風」「劇団立命芸術劇場」の３劇団が一同に集まって一つの公演を行う企画。
+          div.section
+            h2
+              span.icon-play-circle-fill
+              |  演出のことば
+            .content
+        #detail.article 
+          h1 詳細情報
+          div.section
+            h2
+              span.icon-play-circle-fill
+              |  日時
+            .content
+              <iframe src="https://ticket.corich.jp/stage/bp/timetable.php?sid=60807&ad=10%2C15%2C36%2C32&view=10" width="230" height="105" border="0" frameborder="no"></iframe>
+              table
+          div.section.no-bottom
+            h2
+              span.icon-play-circle-fill
+              |  料金
+            map(name="price")
+              area(shape="rect", coords="398,0,598,68", href="#rt", alt="リツイート割無料")
+            img.price-img(src="/public/images/price.png", alt="前売300円 当日500円 リツイート割無料", usemap="price")
+          div.section 
+            h2
+              span.icon-play-circle-fill
+              |  場所
+            img(alt="立命館大学 学生会館小ホール", src="/public/images/map.png")
+            .content
+              .map
+                iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3266.9236503709067!2d135.72486236137698!3d35.03363989406221!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe76b3c6136002569!2z5a2m55Sf5Lya6aSo!5e0!3m2!1sja!2sjp!4v1419363050999", frameborder="0")
+              .map-sub
+                p 
+                  span.red ★
+                  | JR円町駅・阪急西院駅
+                p 市バス快速202/快速205にて「立命館大学前」下車
+                p 市バス205にて「衣笠校前」下車徒歩10分
+                p 
+                  span.red ★
+                  | JR・近鉄京都駅
+                p 市バス50/快速205にて「立命館大学前」下車
+                p 市バス205にて「衣笠校前」下車、徒歩10分
+                p 京阪電車三条駅
+                p 市バス15/59にて「立命館大学前」下車
+        #cast.article
+          h1 役者・スタッフ
+          .section
+            h2
+              span.icon-play-circle-fill
+              |  役者
+            .content
+              span.bold 堕落王　葛山陽平　座　上田昇　阿部惣(劇団愉快犯)　峰守亜弥　神崎麻梨　内田藍海
+          .section 
+            h2
+              span.icon-play-circle-fill
+              |  スタッフ
+            .content
+              p 【舞台監督】山下裕英
+              p 【舞台美術】上田昇
+              p 【照明】山井浩気
+              p 【音響/映像】広垣ゆりえ
+              p 【衣装】寺町走ル
+              p 【メイク】山下裕英
+              p 【小道具】神崎麻梨
+              p 【情報宣伝】佐藤叶(劇団月光斜) 山崎航太郎(劇団月光斜)
+              p 【宣伝美術】立岡千裕 山井浩気
+              p 【WEB】桑折慧 広垣ゆりえ
+              p 【WEB協力】CoRich舞台芸術！
+              p 【渉外】山井浩気
+              p 【制作】山崎航太郎(劇団月光斜) 市道野愛 佐藤好(劇団西一風)
+              p 【製作】劇団西一風
+              p 【協力】劇団月光斜 劇団立命芸術劇場
+        #cm.article
+          h1 宣伝CM
+          .content
+            .video
+              iframe(src="//www.youtube.com/embed/LP5qDtezTkg?rel=0", frameborder="0", allowfullscreen)
       .side
         ul
           li
             span.icon-arrow-right
-            | 劇団西一風
+            a.link(href="http://shar-ippoo.com/", target="_blank") 劇団西一風
           li
             span.icon-arrow-right
-            | 新演劇研究会劇団月光斜
+            a.link(href="http://gekkosya.com/", target="_blank") 新演劇研究会劇団月光斜
           li
             span.icon-arrow-right
-            | 劇団立命芸術劇場
-        .side__tw
-          span.icon-twitter
-          | たのしい就活 Twitter
-          a.button CHECK
-        .side__fb
-          | たのしい就活 Facebook
-          a.button CHECK
-        .side__reserve 
-          span.icon-person
-          | 予約はこちら
-          | !!!!!!
-          a.side__button--full 今すぐ予約する
-        .side__retweet 
-          span.icon-retweet
-          | リツイート割
-          | !!!!!!
-          a.side__button--full: @endorphin_h
+            a.link(href="http://ritsugei.ikaduchi.com/top.html", target="_blank") 劇団立命芸術劇場
+        .tw
+          div
+            span.icon-twitter
+            span.txt
+              | たのしい就活
+              br
+              | Twitter
+            div.wrap
+              a.button.s(href="https://twitter.com/endorphin_h" target="_blank") CHECK
+        #reserve.article
+          h1
+            span.icon-person
+            |  予約はこちら
+          .content
+            a.button(href="https://ticket.corich.jp/apply/60807/", target="_blank") 今すぐ予約する
+            br
+            p.small.right.link
+              | Powered by 
+              a(href="http://ticket.corich.jp/stage/", target="_blank") Corichチケット！
+            p.small.link
+              [PR] <a href="http://www.drerich.jp" target="_blank">レンタルドレス</a>
+              <a href="http://hello-career.net/" target="_blank">留学生 就活</a>
+              <a href="http://goldcard.pochitto.xyz/merit-demerit/" target="_blank">ゴールドカード　ランキング</a>
+              <a href="http://studiobook.jp" target="_blank">撮影スタジオ</a>
+        #rt.article
+          h1
+            span.icon-retweet
+            |  リツイート割
+          .content
+            | Twitterで公演情報をリツイートした方料金無料！来場時にRT画面をご提示下さい。
+            <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/endorphin_h" data-widget-id="547448473457393664">@endorphin_hさんのツイート</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            a.button(href="https://twitter.com/endorphin_h", target="_blank")
+              span.icon-twitter
+              |  @endorphin_h
     script(src='/public/scripts/main.js')
