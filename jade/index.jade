@@ -34,28 +34,37 @@ html
             h2
               span.icon-play-circle-fill
               |  演出のことば
-            .content
+            img(src="/public/images/msg.jpg", alt="")
         #detail.article 
           h1 詳細情報
           div.section
             h2
               span.icon-play-circle-fill
               |  日時
-            .content
-              <iframe src="https://ticket.corich.jp/stage/bp/timetable.php?sid=60807&ad=10%2C15%2C36%2C32&view=10" width="230" height="105" border="0" frameborder="no"></iframe>
-              table
+            table
+              tr
+                td.date: span 2015年1月16日(金)
+                td: a(href="https://ticket.corich.jp/stage/apply.php?sid=60807&sdn=1", target="_blank") 13:00
+                td: a(href="https://ticket.corich.jp/stage/apply.php?sid=60807&sdn=2", target="_blank") 18:00
+              tr
+                td.date: span 2015年1月17日(土)
+                td: a(href="https://ticket.corich.jp/stage/apply.php?sid=60807&sdn=3", target="_blank") 13:00
+                td: a(href="https://ticket.corich.jp/stage/apply.php?sid=60807&sdn=4", target="_blank") 18:00
+              tr
+                td.date: span 2015年1月18日(日)
+                td(colspan="2"): a(href="https://ticket.corich.jp/stage/apply.php?sid=60807&sdn=5", target="_blank") 18:00
           div.section.no-bottom
             h2
               span.icon-play-circle-fill
               |  料金
-            map(name="price")
-              area(shape="rect", coords="398,0,598,68", href="#rt", alt="リツイート割無料")
-            img.price-img(src="/public/images/price.png", alt="前売300円 当日500円 リツイート割無料", usemap="price")
+            //- map(name="price")
+            //-   area(shape="rect", coords="398,0,598,68", href="#rt", alt="リツイート割無料")
+            a(href="#rt"): img.price-img(src="/public/images/price.png", alt="前売300円 当日500円 リツイート割無料")
           div.section 
             h2
               span.icon-play-circle-fill
               |  場所
-            img(alt="立命館大学 学生会館小ホール", src="/public/images/map.png")
+            img.border-bottom(alt="立命館大学 学生会館小ホール", src="/public/images/map.png")
             .content
               .map
                 iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3266.9236503709067!2d135.72486236137698!3d35.03363989406221!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe76b3c6136002569!2z5a2m55Sf5Lya6aSo!5e0!3m2!1sja!2sjp!4v1419363050999", frameborder="0")

@@ -220,6 +220,35 @@ body {
   }
 }
 
+table {
+  font-size: 14px;
+  td{
+    &:last-child {
+      border-bottom: 0;
+    }
+    padding: 10px;
+    a, a:visited {
+      color: #b50000;
+      text-decoration: none;
+    }
+    a:hover {
+      border-bottom: 1px #b50000 solid;
+    }
+    &.date {
+      padding: 0 0 0 10px;
+      span {
+        padding: 10px 10px 10px 0;
+        border-bottom: 1px #f6d2cd solid;
+        tr:last-child & {
+          border-bottom: 0;
+        }
+      }
+      background-color: #fdece8;
+      font-weight: bold;
+    }
+  }
+}
+
 .main {
   @include breakpoint(850px) {
     @include span(5 of 7);
