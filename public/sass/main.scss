@@ -222,29 +222,44 @@ body {
 
 table {
   font-size: 14px;
-  td{
-    &:last-child {
-      border-bottom: 0;
-    }
-    padding: 10px;
-    a, a:visited {
-      color: #b50000;
-      text-decoration: none;
-    }
-    a:hover {
-      border-bottom: 1px #b50000 solid;
-    }
-    &.date {
-      padding: 0 0 0 10px;
-      span {
-        padding: 10px 10px 10px 0;
-        border-bottom: 1px #f6d2cd solid;
-        tr:last-child & {
-          border-bottom: 0;
-        }
-      }
-      background-color: #fdece8;
-      font-weight: bold;
+}
+tr {
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+td {
+  padding: 10px;
+  border-bottom: 1px #f6d2cd solid;
+  &.date {
+    color: #333;
+    background-color: #fdece8;
+    font-weight: bold;
+  }
+  &:nth-child(2) {
+    padding-left: 0;
+  }
+  tr:last-child & {
+    border-bottom: 0;
+  }
+  &.sparse {
+    width: 10px;
+    padding: 0;
+    background: #fdece8;
+    border-bottom: 0;
+  }
+  a, a:visited {
+    color: #b50000;
+    text-decoration: none;
+  }
+  a:hover {
+    border-bottom: 1px #b50000 solid;
+  }
+  &.split {
+    padding-left: 0;
+    span {
+      padding-left: 10px;
+      border-left: 1px #d3d3d3 solid;
     }
   }
 }
