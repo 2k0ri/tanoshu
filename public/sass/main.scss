@@ -9,12 +9,14 @@
 $susy:(
   container-position: center,
   output: float,
-  math: static,
+  math: fluid,
   column-width: 100px,
   columns: 7,
   gutters: .25,
   use-custom: (rem: true)
 );
+
+$susy-pc: layout(isolate);
 
 @font-face {
   font-family: 'icomoon';
@@ -63,7 +65,9 @@ $susy:(
 
 
 body {
-  @include container;
+  @include breakpoint(850px) {
+    @include container;
+  }
 }
 
 .container {
@@ -98,11 +102,14 @@ body {
 }
 
 .nav {
+  overflow-x: auto;
+  /* min-width: 695px; */
   border-bottom: 2px #b50000 solid;
   margin-bottom: 10px;
   ul {
     font-size: 0;
     li {
+      white-space: nowrap;
       display: inline-block;
       font-size: 12px;
       overflow: hidden;
@@ -271,8 +278,34 @@ td {
   }
 }
 
-.price-img {
-  width: 100%;
+.date-container {
+  position: relative;
+}
+.date-announce {
+  vertical-align: bottom;
+  text-align: right;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  span {
+    font-size: 12px;
+  }
+}
+
+.full {
+  @include span(full inside no-gutters);
+}
+
+.three {
+  @include span(1 of 3 inside);
+  text-align: center;
+  vertical-align: middle;
+  margin-bottom: 10px;
+}
+
+.clearfix {
+  @include clearfix;
 }
 
 .video, .map {
@@ -298,6 +331,7 @@ td {
 }
 
 .side {
+  @include span(full inside no-gutters);
   @include breakpoint(850px) {
     @include span(2 of 7 last);
     @include pre(3px);
@@ -370,10 +404,13 @@ span.icon-arrow-right {
     &:hover {
       @include background-image(linear-gradient(#ff7500, #ff9800));
     }
+    &.mt {
+      margin-top: 10px;
+    }
 
 }
 
 .twitter-timeline {
   width: 100% !important;
-  margin: 10px 0;
+  margin-top: 10px;
 }

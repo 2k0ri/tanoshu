@@ -17,8 +17,8 @@ html
           li: a(href="#cast") 役者・スタッフ
           li: a(href="#cm") 宣伝CM
           li.ticket: a(href="#reserve") チケット予約
-      .hero
-        img(src="/public/images/hero.png", alt="たのしい就活", usemap="hero")
+      .hero.clearfix
+        img.full(src="/public/images/hero.png", alt="たのしい就活", usemap="hero")
         map(name="hero")
           area(shape="rect", coords="328,181,736,248", href="https://twitter.com/endorphin_h", alt="たのしい就活Twitter")
       .main
@@ -29,15 +29,22 @@ html
               span.icon-play-circle-fill
               |  三劇団共演企画とは
             .content
+              div.clearfix
+                .three: a(href="http://gekkosya.com/", target="_blank")
+                  img(src="/public/images/gekko.jpg", alt="劇団月光斜")
+                .three: a(href="http://shar-ippoo.com/", target="_blank")
+                  img(src="/public/images/shar.png", alt="劇団西一風")
+                .three: a(href="http://ritsugei.ikaduchi.com/top.html", target="_blank")
+                  img(src="/public/images/ritsugei.png", alt="劇団立命芸術劇場")
               | 立命館大学衣笠キャンパスの「劇団月光斜」「劇団西一風」「劇団立命芸術劇場」の３劇団が一同に集まって一つの公演を行う企画。
-          div.section
+          div.section.clearfix
             h2
               span.icon-play-circle-fill
               |  演出のことば
-            img(src="/public/images/msg.jpg", alt="")
+            img.full(src="/public/images/msg.jpg", alt="")
         #detail.article 
           h1 詳細情報
-          div.section
+          div.section.date-container
             h2
               span.icon-play-circle-fill
               |  日時
@@ -55,20 +62,19 @@ html
               tr
                 td.sparse
                 td.date 2015年1月18日(日)
-                td(colspan="2"): a(href="https://ticket.corich.jp/stage/apply.php?sid=60807&sdn=5", target="_blank") 18:00
-          div.section.no-bottom
+                td(colspan="2"): a(href="https://ticket.corich.jp/stage/apply.php?sid=60807&sdn=5", target="_blank") 13:00
+            div.date-announce: span ※開場は開演の30分前を予定しております。
+          div.section.no-bottom.clearfix
             h2
               span.icon-play-circle-fill
               |  料金
-            //- map(name="price")
-            //-   area(shape="rect", coords="398,0,598,68", href="#rt", alt="リツイート割無料")
-            a(href="#rt"): img.price-img(src="/public/images/price.png", alt="前売300円 当日500円 リツイート割無料")
-          div.section 
+            a(href="#rt"): img.full.price-img(src="/public/images/price.png", alt="前売300円 当日500円 リツイート割無料")
+          div.section.clearfix
             h2
               span.icon-play-circle-fill
               |  場所
-            img.border-bottom(alt="立命館大学 学生会館小ホール", src="/public/images/map.png")
-            .content
+            img.border-bottom.full(alt="立命館大学 学生会館小ホール", src="/public/images/map.png")
+            .content.clearfix
               .map
                 iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3266.9236503709067!2d135.72486236137698!3d35.03363989406221!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe76b3c6136002569!2z5a2m55Sf5Lya6aSo!5e0!3m2!1sja!2sjp!4v1419363050999", frameborder="0")
               .map-sub
@@ -158,9 +164,9 @@ html
             |  リツイート割
           .content
             | Twitterで公演情報をリツイートした方料金無料！来場時にRT画面をご提示下さい。
+            a.button.mt(href="https://twitter.com/endorphin_h", target="_blank")
+              span.icon-twitter
+                |  @endorphin_h
             <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/endorphin_h" data-widget-id="547448473457393664">@endorphin_hさんのツイート</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-            a.button(href="https://twitter.com/endorphin_h", target="_blank")
-              span.icon-twitter
-              |  @endorphin_h
     script(src='/public/scripts/main.js')
