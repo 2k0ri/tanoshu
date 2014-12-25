@@ -16,6 +16,7 @@ var annotate = require('gulp-ng-annotate')
 var p = {
   sass: {
     src:'public/sass/main.scss',
+    srcDest:'build/public/sass/',
     dest:'build/public/style/'
   },
   scripts: {
@@ -44,15 +45,22 @@ gulp.task('compass', function() {
     .pipe(compass({
       css: 'build/public/style',
       sass: 'public/sass',
+      fonts: 'build/public/fonts',
       require: ['susy', 'breakpoint', 'modular-scale'],
-      sourcemap: true
+      sourcemap: true,
+      style: 'compressed'
     }))
     .on('error', function(err) {
       console.log(err) // plumber was not very good with compass
     })
-    .pipe(minifyCss())
+    // .pipe(minifyCss({
+    //   // keepBreaks: true,
+    //   // keepSpecialComments: "*",
+    //   sourceMap: true
+    // }))
     .pipe(gulp.dest(p.sass.dest))
     .pipe(connect.reload())
+  gulp.src(p.sass.src).pipe(gulp.dest(p.sass.srcDest))
 })
 
 // Coffee
@@ -78,7 +86,9 @@ gulp.task('browserify', function() {
 gulp.task('jade', function() {
   gulp.src(p.jade.src)
     .pipe(plumber())
-    .pipe(jade({pretty: true}))
+    .pipe(jade({
+      pretty: true
+    }))
     .pipe(gulp.dest(p.jade.dest))
     .pipe(connect.reload())
 })
