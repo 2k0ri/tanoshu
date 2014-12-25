@@ -61,6 +61,7 @@ gulp.task('compass', function() {
     .pipe(gulp.dest(p.sass.dest))
     .pipe(connect.reload())
   gulp.src(p.sass.src).pipe(gulp.dest(p.sass.srcDest))
+  gulp.src('public/fonts/*').pipe(gulp.dest('build/public/fonts'))
 })
 
 // Coffee

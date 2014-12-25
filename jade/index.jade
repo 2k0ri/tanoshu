@@ -8,10 +8,17 @@ html
     link(rel='stylesheet', href='/public/style/main.css')
   body
     .containter
-      #top.header
-        a
-          img.logo(alt="たのしい就活", src="/public/images/stamp.png")
-          span 三劇団共演企画vol.1「たのしい就活」 公演特設ページ
+      .titleWrap
+        img.logo(alt="たのしい就活", src="/public/images/stamp.png")
+        .title
+          span 三劇団共演企画vol.1
+          p
+            strong たのしい就活
+            |  公演特設ページ
+        #subnav
+          p 「たのしい就活」公演情報をチェック！
+            br
+            | 公演期間：2015年1月16日(金) ～ 2015年1月18日(日)
       .nav
         ul
           li: a(href="#top") トップ
@@ -44,7 +51,8 @@ html
             h2
               span.icon-play-circle-fill
               |  演出のことば
-            img.full(src="/public/images/msg.jpg", alt="")
+            img.full(src="/public/images/msg.png", alt="")
+        .topLink: a(href="#top") ▲このページの先頭へ戻る
         #detail.article 
           h1 詳細情報
           div.section.date-container
@@ -93,6 +101,7 @@ html
                 p 市バス205にて「衣笠校前」下車、徒歩10分
                 p 京阪電車三条駅
                 p 市バス15/59にて「立命館大学前」下車
+        .topLink: a(href="#top") ▲このページの先頭へ戻る
         #cast.article
           h1 役者・スタッフ
           .section
@@ -121,11 +130,13 @@ html
               p 【制作】山崎航太郎(劇団月光斜) 市道野愛 佐藤好(劇団西一風)
               p 【製作】劇団西一風
               p 【協力】劇団月光斜 劇団立命芸術劇場
+        .topLink: a(href="#top") ▲このページの先頭へ戻る
         #cm.article
           h1 宣伝CM
           .content
             .video
               iframe(src="//www.youtube.com/embed/LP5qDtezTkg?rel=0", frameborder="0", allowfullscreen)
+        .topLink: a(href="#top") ▲このページの先頭へ戻る
       .side
         ul
           li
@@ -172,3 +183,18 @@ html
                 |  @endorphin_h
             <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/endorphin_h" data-widget-id="547448473457393664">@endorphin_hさんのツイート</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    #footer
+      ul#footerNav
+        li.triangleRight: a(href="#top") トップ
+        li: a(href="#intro") イントロダクション
+        li: a(href="#detail") 詳細情報
+        li: a(href="#cast") 役者・スタッフ
+        li: a(href="#cm") 宣伝CM
+        li.ticket: a(href="#reserve") チケット予約
+    .titleWrap
+      img.logo(src="/public/images/stamp.png", alt="たのしい就活")
+      .title
+        span 三劇団共演企画vol.1
+        p
+          strong たのしい就活
+          |  公演特設ページ
