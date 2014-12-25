@@ -444,19 +444,13 @@ html{
 }
 
 .topLink{
+  @extend .link;
   width: 100%;
   text-align: right;
-  text-decoration: underline;
   font-size: 12px;
   padding-bottom: 20px;
 }
-.topLink a{
-  color:#2752ce;
 
-}
-.topLink:hover{
-  text-decoration: none;
-}
 #footer{
   border-top: 2px solid silver;
   width: 100%;
@@ -464,66 +458,65 @@ html{
   margin-top: 30px;
   padding-top: 10px;
 }
+
 #footerNav li{
   margin-right: 20px;
   line-height: 18px;
-}
-#footerNav li:before{
-  margin-right: 5px;
-  content: " ";
-  display: inline-block;
-  width: 0;
-  height: 0;
-  border-color: transparent transparent transparent #2752ce;;
-  border-style: solid;
-  border-width: 0.3em 0 0.3em 0.4em ;
+  &:before{
+    margin-right: 5px;
+    content: " ";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-color: transparent transparent transparent #2752ce;;
+    border-style: solid;
+    border-width: 0.3em 0 0.3em 0.4em ;
+  }
 }
 
 .header {
   height: 49px;
   padding: 10px 0;
-}
-.header a{
-  display: table;
-}
-.header span {
-  padding-left: 10px;
-}
-#footerNav{
+  a {
+    display: table;
+  }
+  span {
+    padding-left: 10px;
+  }
 }
 
 #footerNav li{
   float: left;
   font-size: 12px;
+  @extend .link;
 }
-#footerNav li a{
-  color: #2752ce;
-  text-decoration: none;
-}
+
 .logo{
   float: left;
   margin: 10px 0;
 }
+
 .titleWrap{
   clear: both;
   width: 100%;
   font-size: 11px;
   line-height: 15px;
+  p{
+    font-size: 15px;
+    line-height: 21px;
+    margin-bottom: 10px;
+  }
 }
 
-.titleWrap p{
-  font-size: 15px;
-  line-height: 21px;
-  margin-bottom: 10px;
-}
 .title{
   padding:18px 0  0 10px;
   float: left;
-
 }
+
 .nav{
   clear:both;
 }
+
 #subnav p{
   float:right;
   margin-top: 15px;
@@ -533,6 +526,7 @@ html{
   color: #b50000;
   text-align: right;
 }
+
 h1{
   padding:10px;
 }
