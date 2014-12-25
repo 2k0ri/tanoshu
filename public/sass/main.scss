@@ -285,9 +285,11 @@ td {
   vertical-align: bottom;
   text-align: right;
   padding: 10px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
+  @include breakpoint(850px) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
   span {
     font-size: 12px;
   }

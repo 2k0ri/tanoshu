@@ -1,6 +1,8 @@
 doctype html
 html
   head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width,initial-scale=1")
     title 三劇団共演企画vol.1「たのしい就活」 公演特設ページ
     link(rel='stylesheet', href='/public/style/main.css')
   body
@@ -30,12 +32,12 @@ html
               |  三劇団共演企画とは
             .content
               div.clearfix
-                .three: a(href="http://gekkosya.com/", target="_blank")
-                  img(src="/public/images/gekko.jpg", alt="劇団月光斜")
-                .three: a(href="http://shar-ippoo.com/", target="_blank")
-                  img(src="/public/images/shar.png", alt="劇団西一風")
-                .three: a(href="http://ritsugei.ikaduchi.com/top.html", target="_blank")
-                  img(src="/public/images/ritsugei.png", alt="劇団立命芸術劇場")
+                a(href="http://gekkosya.com/", target="_blank")
+                  img.three(src="/public/images/gekko.jpg", alt="劇団月光斜")
+                a(href="http://shar-ippoo.com/", target="_blank")
+                  img.three(src="/public/images/shar.png", alt="劇団西一風")
+                a(href="http://ritsugei.ikaduchi.com/top.html", target="_blank")
+                  img.three(src="/public/images/ritsugei.png", alt="劇団立命芸術劇場")
               | 立命館大学衣笠キャンパスの「劇団月光斜」「劇団西一風」「劇団立命芸術劇場」の３劇団が一同に集まって一つの公演を行う企画。
           div.section.clearfix
             h2
