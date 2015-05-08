@@ -37,14 +37,6 @@ html
           .content.videos
             #main1.video.active
               iframe#archivei(src="//www.youtube.com/embed/YNf5VOowi0I?rel=0", frameborder="0", allowfullscreen)
-            //- #main2.video
-            //-   iframe(src="//www.youtube.com/embed/fA704vz9Q80?rel=0", frameborder="0", allowfullscreen)
-            //- #main3nj.video
-            //-   iframe(src="//www.youtube.com/embed/An6uGNPeDAE?rel=0", frameborder="0", allowfullscreen)
-            //- #main3st.video
-            //-   iframe(src="//www.youtube.com/embed/fFcLzAeiXEk?rel=0", frameborder="0", allowfullscreen)
-            //- #main3nn.video
-            //-   iframe(src="//www.youtube.com/embed/SxrvrzY-FnI?rel=0", frameborder="0", allowfullscreen)
             .menu
               a(href="#main1", data-id="YNf5VOowi0I"): | 1/3
               | |
@@ -224,12 +216,8 @@ html
   script(src="//code.jquery.com/jquery-2.1.4.min.js")
   script(defer)
     :coffee(bare=true)
-      # $archive = $('#archive')
       $ ->
         $('#archive').find('.menu a').click (e) ->
-          # href = $(@).attr('href')
-          # $archive.find('.video').not(href).removeClass('active')
-          # $(href).addClass('active')
           id = $(@).data('id')
           $('#archivei').attr('src', "//www.youtube.com/embed/#{id}?rel=0")
           e.preventDefault()

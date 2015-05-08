@@ -202,12 +202,6 @@ body {
 }
 
 #archive {
-  .video {
-    display: none;
-    &.active {
-      display: block;
-    }
-  }
   .menu {
     color: #d3d3d3;
     a {
