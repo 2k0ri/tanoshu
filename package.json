@@ -1,25 +1,22 @@
 {
   "name": "package",
   "version": "0.0.0",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
-    "napa":"*",
-    "gulp":"*",
-    "gulp-plumber":"*",
-    "gulp-rename":"*",
-    "gulp-compass":"*",
-    "gulp-browserify":"*",
-    "gulp-jade":"*",
-    "gulp-ng-annotate":"*",
-    "gulp-imagemin":"*",
-    "gulp-connect":"*",
-    "gulp-minify-css":"*",
-    "gulp-uglify":"*",
-    "browserify":"*"
-    
-    ,"coffeeify":"*"
-    
+    "browserify": "*",
+    "coffee-script": "^1.9.2",
+    "coffeeify": "*",
+    "gulp": "*",
+    "gulp-browserify": "*",
+    "gulp-compass": "*",
+    "gulp-connect": "*",
+    "gulp-imagemin": "*",
+    "gulp-jade": "*",
+    "gulp-minify-css": "*",
+    "gulp-ng-annotate": "*",
+    "gulp-plumber": "*",
+    "gulp-rename": "*",
+    "gulp-uglify": "*",
+    "napa": "*"
   }
-   
 }

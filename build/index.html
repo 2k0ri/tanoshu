@@ -20,6 +20,7 @@
       <div class="nav">
         <ul>
           <li><a href="#top">トップ</a></li>
+          <li><a href="#archive">公演映像</a></li>
           <li><a href="#intro">イントロダクション</a></li>
           <li><a href="#detail">詳細情報</a></li>
           <li><a href="#cast">役者・スタッフ</a></li>
@@ -29,6 +30,15 @@
       </div>
       <div class="hero clearfix"><a href="https://twitter.com/endorphin_h" target="_blank"><img src="/public/images/hero.png" alt="たのしい就活" class="full"></a></div>
       <div class="main">
+        <div id="archive" class="article">
+          <h1>公演映像</h1>
+          <div class="content videos">
+            <div id="main1" class="video active">
+              <iframe id="archivei" src="//www.youtube.com/embed/YNf5VOowi0I?rel=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="menu"><a href="#main1" data-id="YNf5VOowi0I">1/3</a>|<a href="#main2" data-id="fA704vz9Q80">2/3</a>|<a href="#main3nj" data-id="An6uGNPeDAE">3/3 中島END</a>|<a href="#main3st" data-id="fFcLzAeiXEk">3/3 瀬戸中END</a>|<a href="#main3nn" data-id="SxrvrzY-FnI">3/3 仲野END</a></div>
+          </div>
+        </div>
         <div id="intro" class="article"> 
           <h1>イントロダクション</h1>
           <div class="section">
@@ -175,4 +185,15 @@
       </div>
     </div>
   </body>
+  <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script defer>$(function() {
+  return $('#archive').find('.menu a').click(function(e) {
+    var id;
+    id = $(this).data('id');
+    $('#archivei').attr('src', "//www.youtube.com/embed/" + id + "?rel=0");
+    return e.preventDefault();
+  });
+});
+
+  </script>
 </html>

@@ -1,5 +1,5 @@
 // Util
-var gulp =require('gulp');
+var gulp = require('gulp');
 var plumber = require('gulp-plumber');
 var rename = require('gulp-rename');
 var connect = require('gulp-connect');

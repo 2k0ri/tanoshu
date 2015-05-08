@@ -201,10 +201,29 @@ body {
   }
 }
 
+#archive {
+  .video {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+  .menu {
+    color: #d3d3d3;
+    a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 0 10px;
+      color: #b50000;
+      text-decoration: none;
+    }
+  }
+}
+
 .content {
   padding: 10px;
   font-size: 14px;
-  #cm &, .side & {
+  #cm &, #archive &, .side & {
     border: 1px #ccc solid;
     border-top: 0;
   }
